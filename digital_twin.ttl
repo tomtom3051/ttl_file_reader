@@ -1,0 +1,49 @@
+@prefix ns0: <http://www.example.org/digitaltwin#> .
+
+<http://www.example.org/digitaltwin#Atlas_floor_3>
+  ns0:hasActuator ns0:11Buzzer00000, ns0:11EmergencyLights00000 ;
+  ns0:hasSensor ns0:11Smoke00000 ;
+  ns0:hasChildDigitalTwin ns0:Elevator_1, ns0:Elevator_2, ns0:Elevator_3, ns0:Elevator_4, ns0:Elevator_5, ns0:Elevator_6, ns0:Elevator_hallway_1, ns0:Elevator_hallway_2, ns0:Elevator_Toilet_1, ns0:Elevator_Toilet_10, ns0:Elevator_Toilet_11, ns0:Elevator_Toilet_12, ns0:Elevator_Toilet_2, ns0:Elevator_Toilet_3, ns0:Elevator_Toilet_4, ns0:Elevator_Toilet_5, ns0:Elevator_Toilet_6, ns0:Elevator_Toilet_7, ns0:Elevator_Toilet_8, ns0:Elevator_Toilet_9, ns0:Large_room_1, ns0:Large_room_2, ns0:Room_1, ns0:Room_10, ns0:Room_11, ns0:Room_12, ns0:Room_13, ns0:Room_14, ns0:Room_15, ns0:Room_16, ns0:Room_17, ns0:Room_18, ns0:Room_19, ns0:Room_2, ns0:Room_20, ns0:Room_21, ns0:Room_22, ns0:Room_23, ns0:Room_24, ns0:Room_25, ns0:Room_26, ns0:Room_27, ns0:Room_28, ns0:Room_29, ns0:Room_3, ns0:Room_30, ns0:Room_31, ns0:Room_32, ns0:Room_4, ns0:Room_5, ns0:Room_6, ns0:Room_7, ns0:Room_8, ns0:Room_9, ns0:Stairwell_1, ns0:Stairwell_2, ns0:Toilet_1, ns0:Toilet_10, ns0:Toilet_2, ns0:Toilet_3, ns0:Toilet_4, ns0:Toilet_5, ns0:Toilet_6, ns0:Toilet_7, ns0:Toilet_8, ns0:Toilet_9 .
+
+ns0:Room_10
+  ns0:hasSensor ns0:11Air00001 ;
+  ns0:hasActuator ns0:11Window00001 .
+
+ns0:11Buzzer00000
+  a ns0:Actuator ;
+  ns0:actuatorID "11Buzzer00000" ;
+  ns0:actuatorType "Buzzer" .
+
+ns0:Room_9
+  ns0:hasSensor ns0:11Air00000 ;
+  ns0:hasActuator ns0:11Window00000 .
+
+ns0:11Smoke00000
+  a ns0:Sensor ;
+  ns0:sensorID "11Smoke00000" ;
+  ns0:sensorType "Smoke" .
+
+ns0:11Window00001
+  a ns0:Actuator ;
+  ns0:actuatorID "11Window00001" ;
+  ns0:actuatorType "Window" .
+
+ns0:11Air00000
+  a ns0:Sensor ;
+  ns0:sensorID "11Air00000" ;
+  ns0:sensorType "Air" .
+
+ns0:11Window00000
+  a ns0:Actuator ;
+  ns0:actuatorID "11Window00000" ;
+  ns0:actuatorType "Window" .
+
+ns0:11Air00001
+  a ns0:Sensor ;
+  ns0:sensorID "11Air00001" ;
+  ns0:sensorType "Air" .
+
+ns0:11EmergencyLights00000
+  a ns0:Actuator ;
+  ns0:actuatorID "11EmergencyLights00000" ;
+  ns0:actuatorType "EmergencyLights" .
