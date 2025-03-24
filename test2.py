@@ -58,7 +58,8 @@ def gather_info(graph, resource, ns, visited=None):
 def main():
     # Load the TTL file into an RDF graph
     g = Graph()
-    g.parse("digital_twin.ttl", format="turtle")
+    # g.parse("digital_twin.ttl", format="turtle")
+    g.parse("dt.ttl", format="turtle")
 
     # Dynamically determine namespace
     NS0 = get_namespace(g)

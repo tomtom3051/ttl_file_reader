@@ -1,0 +1,112 @@
+@prefix ns0: <http://www.example.org/digitaltwin#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+<http://www.example.org/digitaltwin#Atlas_building>
+    ns0:hasActuator ns0:11Buzzer00000, ns0:11EmergencyLights00000 ;
+    ns0:hasSensor ns0:11Smoke00000 ;
+    ns0:hasChildDigitalTwin ns0:Atlas_floor_1, ns0:Atlas_floor_2 ;
+    ns0:hasGeoLocation ns0:Atlas_building_coords  .
+
+ns0:Atlas_floor_1
+    ns0:hasSensor ns0:11Air00001 ;
+    ns0:hasActuator ns0:11Window00001 ;
+    ns0:hasMeshGeometry ns0:Atlas_floor_1_Mesh .
+
+ns0:Atlas_floor_2
+    ns0:hasSensor ns0:11Air00002 ;
+    ns0:hasChildDigitalTwin ns0:Room_1, ns0:Room_2 ;
+    ns0:hasGeoLocation ns0:Atlas_floor_2_coords  .
+
+ns0:Room_1
+    ns0:hasActuator ns0:11Buzzer00001 ;
+    ns0:hasMeshGeometry ns0:Room_1_Mesh .
+
+ns0:Room_2
+    ns0:hasSensor ns0:11Smoke00001 ;
+    ns0:hasMeshGeometry ns0:Room_2_Mesh .
+
+ns0:11Buzzer00000
+  a ns0:Actuator ;
+  ns0:actuatorID "11Buzzer00000" ;
+  ns0:actuatorType "Buzzer" .
+
+ns0:11Buzzer00001
+  a ns0:Actuator ;
+  ns0:actuatorID "11Buzzer00001" ;
+  ns0:actuatorType "Buzzer" .
+
+ns0:11EmergencyLights00000
+  a ns0:Actuator ;
+  ns0:actuatorID "11EmergencyLights00000" ;
+  ns0:actuatorType "EmergencyLights" .
+
+ns0:11Window00001
+  a ns0:Actuator ;
+  ns0:actuatorID "11Window00001" ;
+  ns0:actuatorType "Window" .
+
+ns0:11Smoke00000
+  a ns0:Sensor ;
+  ns0:sensorID "11Smoke00000" ;
+  ns0:sensorType "Smoke" .
+
+ns0:11Smoke00001
+  a ns0:Sensor ;
+  ns0:sensorID "11Smoke00001" ;
+  ns0:sensorType "Smoke" .
+
+ns0:11Air00001
+  a ns0:Sensor ;
+  ns0:sensorID "11Air00001" ;
+  ns0:sensorType "Air" .
+
+ns0:11Air00002
+  a ns0:Sensor ;
+  ns0:sensorID "11Air00002" ;
+  ns0:sensorType "Air" .
+
+ns0:Atlas_building_coords
+    ns0:latitude 0 ;
+    ns0:longitude 0 ;
+    ns0:altitude 20 .
+
+ns0:Atlas_floor_2_coords
+    ns0:latitude 0 ;
+    ns0:longitude 0 ;
+    ns0:altitude 30 .
+
+ns0:Atlas_floor_1_Mesh
+    ns0:hasVertices (
+        [ geo:asWKT "POINT(20 20 -20)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(20 -20 -20)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(-20 20 -20)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(-20 -20 -20)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(20 20 0)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(20 -20 0)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(-20 20 0)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(-20 -20 0)"^^geo:wktLiteral ]
+    ) .
+
+ns0:Room_1_Mesh
+    ns0:hasVertices (
+        [ geo:asWKT "POINT(20 20 -10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(20 20 10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(-20 20 -10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(-20 20 10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(20 0 -10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(20 0 10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(-20 0 -10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(-20 0 10)"^^geo:wktLiteral ]
+    ) .
+
+ns0:Room_2_Mesh
+    ns0:hasVertices (
+        [ geo:asWKT "POINT(20 -20 -10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(20 -20 10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(-20 -20 -10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(-20 -20 10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(20 0 -10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(20 0 10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(-20 0 -10)"^^geo:wktLiteral ]
+        [ geo:asWKT "POINT(-20 0 10)"^^geo:wktLiteral ]
+    ) .
